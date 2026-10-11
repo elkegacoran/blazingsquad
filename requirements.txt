@@ -1,0 +1,7 @@
+selenium
+webdriver-manager
+pandas
+openpyxl
+tqdm
+requests
+pillow

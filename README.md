@@ -31,10 +31,10 @@ WA_Blast/
 ## Instalasi
 
 ```bash
-pip install -r requirements-wa-blast.txt
+pip install -r requirements.txt
 ```
 
-> **Python 3.9+** diperlukan.
+> **Python 3.9+** diperlukan. Disarankan menggunakan Virtual Environment (`python3 -m venv venv && source venv/bin/activate`).
 
 ---
 
@@ -80,9 +80,16 @@ TELEGRAM_CHAT_ID   = "123456789"             # Dari @userinfobot
 
 ### Headless Mode
 ```python
-HEADLESS_MODE = True  # Jalankan tanpa tampilan browser
+HEADLESS_MODE = False  # Set False agar browser terbuka di layar (Direkomendasikan)
 ```
 > ⚠️ WA Web kadang memblokir sesi headless. Test dulu sebelum production.
+
+### Profil Chrome (Bebas Bentrok / Anti SingletonLock)
+```python
+PROFILE_MODE = "SEPARATE"  # Direkomendasikan: Sesi tersimpan di .chrome_profile/
+```
+- **`SEPARATE`**: Bot menggunakan folder profil sendiri (`.chrome_profile/`). Anda bisa bebas membuka browser Chrome biasa untuk browsing tanpa khawatir bot crash karena bentrok.
+- **`DEFAULT`**: Menggunakan profil Chrome utama. Wajib menutup semua jendela Google Chrome sebelum script dijalankan.
 
 ---
 

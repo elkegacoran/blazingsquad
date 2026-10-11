@@ -53,10 +53,15 @@ LINE_DELAY = 1
 # 🖥️ 3. PENGATURAN BROWSER & PROFIL CHROME (BROWSER MODE)
 # ==============================================================================
 # Pilihan PROFILE_MODE:
-#   "DEFAULT"  -> Menggunakan profil Chrome utama komputer Anda (yang sudah login WA Web).
-#                 *PENTING: Tutup jendela Chrome biasa Anda sebelum menjalankan script ini agar tidak bentrok!
-#   "SEPARATE" -> Menggunakan profil Chrome terpisah khusus bot (bebas bentrok, tapi perlu scan QR 1x di awal).
-PROFILE_MODE = "DEFAULT"   # Opsi: "DEFAULT" atau "SEPARATE"
+#   "SEPARATE" -> (DIREKOMENDASIKAN) Profil Chrome terpisah khusus bot.
+#                 Bebas bentrok meskipun Anda sedang membuka Chrome untuk aktivitas lain!
+#                 Cukup scan QR WhatsApp Web 1x di awal, sesi tersimpan seterusnya.
+#   "DEFAULT"  -> Menggunakan profil Chrome utama komputer Anda.
+#                 *PENTING: Wajib tutup semua jendela Chrome biasa sebelum menjalankan script agar tidak crash SingletonLock.
+PROFILE_MODE = "SEPARATE"   # Opsi: "SEPARATE" atau "DEFAULT"
+
+# Folder penyimpanan sesi profil bot jika PROFILE_MODE = "SEPARATE"
+CHROME_PROFILE_DIR = os.path.join(BASE_DIR, ".chrome_profile")
 
 # Mode Headless (Tampilan Browser):
 # Set True  -> Chrome berjalan di latar belakang tanpa jendela tampilan.

@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Selenium / WA Blast Profile & Logs
+.chrome_profile/
+logs/
+checkpoint.txt
+
+# OS
+.DS_Store
+Thumbs.db
