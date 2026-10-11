@@ -16,3 +16,5 @@ checkpoint.txt
 # OS
 .DS_Store
 Thumbs.db
+
+*.xlsx
